@@ -1,5 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+
 /* Hide main tabs toolbar */
 #TabsToolbar {
 	visibility: collapse;
@@ -20,7 +21,7 @@
 
 /* Shrink sidebar until hovered, when using Tree Style Tab. */
 :root {
-	--sidebar-hover-width: 50px;
+	--sidebar-hover-width: 10px;
   --sidebar-visible-width: 200px;
 }
 #sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
@@ -146,6 +147,10 @@ opacity:1 !important;
 #urlbar {
 	margin-left: 1px !important;
 	margin-right: 1px !important;
+}
+
+#urlbar-zoom-button {
+	display:none!important;
 }
 
 .tab-background {
