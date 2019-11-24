@@ -1,3 +1,6 @@
+/* Almost everything is copied from u/TanzNukeTerror on reddit,
+from this thread: https://www.reddit.com/r/FirefoxCSS/comments/7emhsq/my_compact_treestyletab_css_and_sidebar_hover/ */
+
 /* Hide .twisty and adjust margins so favicons have 7px on left. */
 .tab .twisty {
 	visibility: hidden;
@@ -100,4 +103,3 @@
 .tab.muted {
 	opacity: 0.5;
 }
-

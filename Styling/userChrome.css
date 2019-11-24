@@ -1,33 +1,46 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+:root {
+	--sidebar-hover-width: 10px;
+  --sidebar-visible-width: 200px;
+	--tabs-border: transparent !important;
+	--toolbarbutton-border-radius: 0px !important;
+
+}
 
 /* Hide main tabs toolbar */
 #TabsToolbar {
 	visibility: collapse;
 }
-/* Sidebar min and max width removal */
+
+/* Sidebar preferences */
 #sidebar {
 	max-width: none !important;
 	min-width: 0px !important;
+	opacity: 0 !important;
 }
-/* Hide splitter, when using Tree Style Tab. */
+
+#sidebar:hover {
+  opacity: 1 !important;
+}
+
+#sidebar-header {
+  display: none !important;
+}
+
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
 	display: none !important;
 }
-/* Hide sidebar header, when using Tree Style Tab. */
+
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
 	visibility: collapse;
 }
 
-/* Shrink sidebar until hovered, when using Tree Style Tab. */
-:root {
-	--sidebar-hover-width: 10px;
-  --sidebar-visible-width: 200px;
-}
 #sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
 	min-width: var(--wide-tab-width) !important;
 	max-width: none !important;
 }
+
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
 	transition: all 300ms !important;
 	position: relative !important;
@@ -38,6 +51,7 @@
   max-width: var(--sidebar-hover-width) !important;
   opacity: 0 !important;
 }
+
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
 	transition: all 100ms !important;
 	margin-right: calc(var(--sidebar-visible-width) * -1) !important;
@@ -46,31 +60,6 @@
   max-width: var(--sidebar-visible-width) !important;
   opacity: 1 !important;
 }
-
-#sidebar {
-  opacity: 0 !important;
-}
-
-#sidebar:hover {
-  opacity: 1 !important;
-}
-
-
-
-/* #sidebar-header is hidden by default, change "none" to "inherit" to restore it. */
-#sidebar-header {
-  display: none !important;
-}
-
-/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
-#sidebar-splitter {
-}
-
-
-
-/* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
- */
-
 
 :root:not([customizing]) #nav-bar toolbarbutton
  {
@@ -90,30 +79,19 @@ margin-left:0 !important;
 pointer-events: auto !important;
 }
 
-/* url bar text shrinks when in "stealth mode" */
-#nav-bar #urlbar {
-font-size: 0.85em !important;
-    transition: all 100ms var(--animation-easing-function) !important;
-}
-
 :root:not([customizing]) :hover > #nav-bar #urlbar,
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #urlbar {
 font-size: 1.2em !important;
 }
 
-
-/* some experimentation with expanding tab on hover to see the title better, it's kinda stupid but I was just messing around, could be something useful in the future */
-.tabbrowser-tab:not([selected]):hover {
-   min-width: 300px !important;
-   transition: min-width 150ms var(--animation-easing-function) 2s !important;
-}
-
- :root {
-  --tabs-border: transparent !important;
-}
-
 .tabbrowser-tab::after, .tabbrowser-tab::before {
    border-left: none !important;
+}
+
+/* URL and navbar preferences */
+#nav-bar #urlbar {
+font-size: 0.85em !important;
+    transition: all 100ms var(--animation-easing-function) !important;
 }
 
 #urlbar, .searchbar-textbox {
@@ -131,27 +109,21 @@ font-size: 1.2em !important;
 opacity:1;
 }
 
-#urlbar {
-opacity:1 !important;
-}
-
 #urlbar .urlbar-input-box {
 opacity:1 !important;
-}
-
-#urlbar, .searchbar-textbox {
-	border: 0px !important;
-	height: 20px !important;
 }
 
 #urlbar {
 	margin-left: 1px !important;
 	margin-right: 1px !important;
+	opacity:1 !important;
 }
 
 #urlbar-zoom-button {
 	display:none!important;
 }
+
+/* Other preferences */
 
 .tab-background {
 	border-top: none !important;
@@ -163,14 +135,10 @@ opacity:1 !important;
 	margin-bottom: 0px !important;
 }
 
-
 window:not([chromehidden~="toolbar"]) #urlbar-container > .toolbarbutton-1:-moz-any([disabled], :not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon[class] {
-
 	box-shadow: none !important;
 	border: 0px !important;
 }
-
-/* bookmarks toolbar edge style */
 
 toolbarbutton.bookmark-item {
 	border: 1px rgba(0, 0, 0, 0) solid !important;
@@ -188,48 +156,48 @@ toolbarbutton.bookmark-item:hover {
 #TabsToolbar {
 	margin-bottom: 0px !important;
 }
+
 #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
-
 
 #TabsToolbar .tab-background {
 	border-right: 0px !important;
 	border-left: 0px !important;
 }
+
 .scrollbutton-up, .scrollbutton-down {
 	margin-bottom: 0px !important;
 }
+
 .scrollbutton-up:hover, .scrollbutton-down:hover {
 	background: rgba(42, 42, 42, 1) ;
 }
+
 .scrollbutton-up:hover:active, .scrollbutton-down:hover:active {
 	background: #444;
 }
+
 .tabs-newtab-button .toolbarbutton-icon {
 	background: transparent ;
 }
-#urlbar, .searchbar-textbox {
-	box-shadow: none !important;
-}
+
 .close-icon > .toolbarbutton-icon {
 	border-radius: 0px !important;
 }
+
 #TabsToolbar[movingtab] {
 	padding-bottom: 0px !important;
 }
+
 #TabsToolbar[movingtab] > .tabbrowser-tabs {
 	padding-bottom: 0px !important;
 	margin-bottom: 0px !important;
 }
+
 #new-tab-button > .toolbarbutton-icon, #alltabs-button > .toolbarbutton-icon {
 	background-color: transparent;
 }
-:root {
-	--toolbarbutton-border-radius: 0px !important;
-}
-
-
 
 #context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
 	padding: 0px !important;
@@ -240,6 +208,7 @@ toolbarbutton.bookmark-item:hover {
 	--tab-loading-fill: -moz-win-accentcolor !important;
 box-shadow: none !important;
 }
+
 #tabbrowser-tabs:-moz-window-inactive {
 	--tab-line-color: rgb(128, 128, 128) !important;
 }
@@ -248,43 +217,10 @@ box-shadow: none !important;
 filter: saturate(0%);
 }
 
-
 :root[lwtheme-image]:-moz-lwtheme-brighttext {
     text-shadow: none !important;
 }
 
-
-/*
- * Only show close buttons on background tabs when hovering with the mouse
- *
- * Contributor(s): Timvde
- */
-
-.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
-  display: none !important;
-}
-
-.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
-  display: -moz-box !important;
-}
-
-/*
- * Underlines and dims unloaded tabs
- *
- * Contributor(s): josemam
- */
-
-.tabbrowser-tab[pending] {
- font-style: italic;
-}
-
-
-toolbarspring {
-    min-width: 8px;
-    max-width: 8px;
-}
-
-/* Change tab max width */
 .tabbrowser-tab[fadein]:not([pinned]) {
     max-width: 300px !important;
 }
