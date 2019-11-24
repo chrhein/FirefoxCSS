@@ -52,11 +52,13 @@
   display: none !important;
 }
 
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
++ #sidebar-splitter {
 	display: none !important;
 }
 
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+#sidebar-header {
 	visibility: collapse;
 }
 
@@ -86,7 +88,7 @@
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
-   border-left: none !important;
+  border-left: none !important;
 }
 
 
@@ -94,8 +96,8 @@
 /* URL and navbar preferences */
 
 #nav-bar #urlbar {
-font-size: 0.85em !important;
-    transition: all 100ms var(--animation-easing-function) !important;
+	font-size: 0.85em !important;
+	transition: all 100ms var(--animation-easing-function) !important;
 }
 
 #nav-bar {
@@ -131,7 +133,9 @@ opacity:1 !important;
 
 /* Other preferences */
 
-#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left,
+#context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left,
+#context-bookmarkpage > .menu-iconic-left {
 	padding: 0px !important;
 }
 
@@ -146,7 +150,7 @@ opacity:1 !important;
 #tabbrowser-tabs {
 	--tab-line-color: -moz-win-accentcolor !important;
 	--tab-loading-fill: -moz-win-accentcolor !important;
-box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 #tabbrowser-tabs:-moz-window-inactive {
@@ -181,7 +185,11 @@ toolbarbutton.bookmark-item:hover {
 	border: 1px rgba(75, 75, 75, 1) solid !important;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container > .toolbarbutton-1:-moz-any([disabled], :not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon[class] {
+window:not([chromehidden~="toolbar"])
+#urlbar-container > .toolbarbutton-1:-moz-any([disabled],
+	:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], 
+#main-window:not([customizing])
+#back-button[disabled] > .toolbarbutton-icon[class] {
 	box-shadow: none !important;
 	border: 0px !important;
 }
