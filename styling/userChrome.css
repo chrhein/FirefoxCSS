@@ -2,13 +2,13 @@
 
 :root {
 	--sidebar-hover-width: 10px;
-  --sidebar-visible-width: 200px;
+	--sidebar-visible-width: 200px;
 	--tabs-border: transparent !important;
 	--toolbarbutton-border-radius: 0px !important;
 }
 
 :root[lwtheme-image]:-moz-lwtheme-brighttext {
-    text-shadow: none !important;
+	text-shadow: none !important;
 }
 
 :root:not([customizing]) #nav-bar toolbarbutton
@@ -24,9 +24,9 @@
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
 :root:not([customizing]) :hover > #titlebar toolbarbutton {
     transform: scale(1, 1) !important;
-		opacity:1 !important;
-		margin-left:0 !important;
-		pointer-events: auto !important;
+	opacity:1 !important;
+	margin-left:0 !important;
+	pointer-events: auto !important;
 }
 
 :root:not([customizing]) :hover > #nav-bar #urlbar,
@@ -45,11 +45,11 @@
 }
 
 #sidebar:hover {
-  opacity: 1 !important;
+	opacity: 1 !important;
 }
 
 #sidebar-header {
-  display: none !important;
+	display: none !important;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
@@ -70,25 +70,25 @@
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
 	transition: all 300ms !important;
 	position: relative !important;
-  overflow-x: hidden !important;
-  margin-right: calc(var(--sidebar-hover-width) * -1) !important;
-  left: var(--sidebar-hover-width) !important;
-  min-width: var(--sidebar-hover-width) !important;
-  max-width: var(--sidebar-hover-width) !important;
-  opacity: 0 !important;
+	overflow-x: hidden !important;
+	margin-right: calc(var(--sidebar-hover-width) * -1) !important;
+	left: var(--sidebar-hover-width) !important;
+	min-width: var(--sidebar-hover-width) !important;
+	max-width: var(--sidebar-hover-width) !important;
+	opacity: 0 !important;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
 	transition: all 100ms !important;
 	margin-right: calc(var(--sidebar-visible-width) * -1) !important;
-  left: var(--sidebar-visible-width) !important;
-  min-width: var(--sidebar-visible-width) !important;
-  max-width: var(--sidebar-visible-width) !important;
-  opacity: 1 !important;
+	left: var(--sidebar-visible-width) !important;
+	min-width: var(--sidebar-visible-width) !important;
+	max-width: var(--sidebar-visible-width) !important;
+	opacity: 1 !important;
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
-  border-left: none !important;
+	border-left: none !important;
 }
 
 
@@ -111,12 +111,12 @@
 }
 
 #urlbar, .searchbar-textbox {
-  border: none !important;
-  box-shadow: none !important;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 #urlbar .urlbar-input-box {
-opacity:1 !important;
+	opacity:1 !important;
 }
 
 #urlbar {
@@ -187,7 +187,7 @@ toolbarbutton.bookmark-item:hover {
 
 window:not([chromehidden~="toolbar"])
 #urlbar-container > .toolbarbutton-1:-moz-any([disabled],
-	:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], 
+:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], 
 #main-window:not([customizing])
 #back-button[disabled] > .toolbarbutton-icon[class] {
 	box-shadow: none !important;
@@ -233,5 +233,5 @@ window:not([chromehidden~="toolbar"])
 }
 
 .webextension-browser-action {
-filter: saturate(0%);
+	filter: saturate(0%);
 }
