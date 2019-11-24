@@ -3,4 +3,4 @@ CSS files I use to style Firefox.
 
 The result:
 
-![](assets/preview.gif)
+<img src="https://github.com/chrhein/FirefoxCSS/raw/master/assets/preview.gif" data-canonical-src="https://github.com/chrhein/FirefoxCSS/raw/master/assets/preview.gif" width="400" height="400" />
