@@ -1,6 +1,4 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-:root {
+*|*:root {
 	--sidebar-hover-width: 10px;
 	--sidebar-visible-width: 200px;
 	--tabs-border: transparent !important;
@@ -76,6 +74,7 @@
 	min-width: var(--sidebar-hover-width) !important;
 	max-width: var(--sidebar-hover-width) !important;
 	opacity: 0 !important;
+	z-index:1;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
@@ -85,13 +84,12 @@
 	min-width: var(--sidebar-visible-width) !important;
 	max-width: var(--sidebar-visible-width) !important;
 	opacity: 1 !important;
+	z-index:1;
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
 	border-left: none !important;
 }
-
-
 
 /* URL and navbar preferences */
 
@@ -187,7 +185,7 @@ toolbarbutton.bookmark-item:hover {
 
 window:not([chromehidden~="toolbar"])
 #urlbar-container > .toolbarbutton-1:-moz-any([disabled],
-:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], 
+:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class],
 #main-window:not([customizing])
 #back-button[disabled] > .toolbarbutton-icon[class] {
 	box-shadow: none !important;
