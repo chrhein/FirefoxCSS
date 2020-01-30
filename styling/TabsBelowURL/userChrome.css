@@ -13,6 +13,9 @@
   -moz-box-ordinal-group: 3 !important;
 }
 
+#main-window {
+  background: #191919 !important;
+}
 
 /* Three window control buttons */
 .titlebar-buttonbox-container {
@@ -111,8 +114,12 @@
 }
 
 .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]):not([multiselected]) {
-  background-color: transparent !important;
+  background-color: #171717 !important;
   margin-top: -5px !important;
+}
+
+.tabbrowser-tab:hover {
+  color: white !important;
 }
 
 .tabbrowser-tab::after {
@@ -256,6 +263,7 @@ toolbarbutton.bookmark-item:hover {
   font-size: 12px !important;
 }
 
+
 .urlbarView {
   top: calc(100% - 5px) !important;
   width: 100%;
@@ -303,44 +311,6 @@ toolbarbutton.bookmark-item:hover {
   color: #CA6924 !important;
 }
 
-/* Monochrome Extension Icons*/
-#_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-#_7a73dc4b-1b38-40e7-ac56-7d356dd4af34_-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-#ublock0_raymondhill_net-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-#https-everywhere_eff_org-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-#jid1-bofifl9vbdl2zq_jetpack-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-#jid1-mnnxcxisbpnsxq-eff_jetpack-browser-action {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  margin-bottom: -2px !important;
-}
-
-
 /* OTHER */
 
 
@@ -377,4 +347,8 @@ toolbarbutton.bookmark-item:hover {
 
 #PanelUI-menu-button {
     display: none;
+}
+
+#urlbar-zoom-button {
+	display:none!important;
 }
